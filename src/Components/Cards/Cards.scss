@@ -1,0 +1,49 @@
+.cards {
+  
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-rows: max-content;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .4s ease-in, color .4s ease-in;
+    color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    line-height: 250px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .6);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+  }
+}

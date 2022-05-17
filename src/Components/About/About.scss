@@ -1,0 +1,53 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  font-size: 16px;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    gap: 50px;
+    box-sizing: border-box;
+
+    &_direction_reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image {
+    max-width: 50%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  &__subtitle {
+    color: gray;
+    font-weight: normal;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    line-height: 22px;
+  }
+}
+
+@include tablet {
+  .about {
+    font-size: 14px;
+
+    &__content {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+  }
+}
